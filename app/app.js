@@ -1,7 +1,7 @@
 const angular = require('angular')
 require('angular-animate')
 
-angular.module('myApp', []).controller('userCtrl', function ($scope) {
+angular.module('myApp', []).controller('userCtrl', function($scope) {
     $scope.fName = '';
     $scope.lName = '';
     $scope.passw1 = '';
@@ -17,7 +17,7 @@ angular.module('myApp', []).controller('userCtrl', function ($scope) {
     $scope.edit = true;
     $scope.error = false;
     $scope.incomplete = false;
-    $scope.editUser = function (id) {
+    $scope.editUser = function(id) {
         if (id == 'new') {
             $scope.edit = true;
             $scope.incomplete = true;
@@ -30,12 +30,12 @@ angular.module('myApp', []).controller('userCtrl', function ($scope) {
         }
     };
 
-    $scope.$watch('passw1', function () { $scope.test(); });
-    $scope.$watch('passw2', function () { $scope.test(); });
-    $scope.$watch('fName', function () { $scope.test(); });
-    $scope.$watch('lName', function () { $scope.test(); });
+    $scope.$watch('passw1', function() { $scope.test(); });
+    $scope.$watch('passw2', function() { $scope.test(); });
+    $scope.$watch('fName', function() { $scope.test(); });
+    $scope.$watch('lName', function() { $scope.test(); });
 
-    $scope.test = function () {
+    $scope.test = function() {
         if ($scope.passw1 !== $scope.passw2) {
             $scope.error = true;
         } else {
@@ -43,8 +43,8 @@ angular.module('myApp', []).controller('userCtrl', function ($scope) {
         }
         $scope.incomplete = false;
         if ($scope.edit && (!$scope.fName.length ||
-            !$scope.lName.length ||
-            !$scope.passw1.length || !$scope.passw2.length)) {
+                !$scope.lName.length ||
+                !$scope.passw1.length || !$scope.passw2.length)) {
             $scope.incomplete = true;
         }
     };

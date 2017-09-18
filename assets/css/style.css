@@ -1,38 +1,54 @@
 body {
-  padding-top: 50px;
+    padding-top: 50px;
 }
-.leftbar{
+
+.font {
+    color: #ffffff;
+    font-size: 12px;
+}
+
+.leftbar {
     position: fixed;
-    top:51px;
-    left:0;
-    bottom:0;
+    top: 51px;
+    left: 0;
+    bottom: 0;
     z-index: 1000;
     display: block;
-    padding:20px;
-    background-color: #f5f5f5;
-    border-right: 1px solid #eee;
+    background-color: #293038;
+    width: 180px;
 }
-.nav-sidebar{
-    margin-right: -21px;
-    margin-bottom: 20px;
-    margin-left: -20px;
+
+.rightcontent {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 180px;
+    width: auto;
 }
-.rightcontent{
-    padding:20px;
+
+.leftbar li {
+    /* padding-right: 20px; */
+    /* padding-left: 20px; */
+    height: 40px;
 }
-.nav-sidebar > li > a {
-  padding-right: 20px;
-  padding-left: 20px;
+
+.leftbar>.active>a,
+.leftbar>.active>a:hover,
+.leftbar>.active>a:focus {
+    height: 40px;
 }
-.nav-sidebar > .active > a,
-.nav-sidebar > .active > a:hover,
-.nav-sidebar > .active > a:focus {
-  color: #fff;
-  background-color: #428bca;
+
+.active {
+    background-color: #F4F6F8;
 }
-@media (min-width: 768px) {
-    .rightcontent{
-        padding-left: 40px;
-        padding-right: 40px;
-    }
+
+.console-icon-left {
+    color: #aeb9c2;
+    width: 50px;
+    float: left;
+}
+
+.left {
+    float: left;
 }
